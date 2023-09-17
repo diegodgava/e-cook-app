@@ -8,7 +8,7 @@ function Login() {
   const [userPassword, setUserPassword] = useState('');
   const navigate = useNavigate();
 
-  const handleclick = (event) => {
+  const handleclick = (event: { preventDefault: () => void; }) => {
     event.preventDefault();
     navigate('/meals');
     const emailLS = { email: userEmail };
